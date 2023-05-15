@@ -2,8 +2,151 @@
 
 /* 
     Paleta de cores:
-    Verde claro: D6EFED
+    Verde claro: a7e7cb
     Verde escuro: 7DABA1
     Roxo escuro: 6F3282
-    Lilás acinzentado: BF8CCF
+    Lilás acinzentado: 795285
 */
+
+:root {
+    --font1: 'Poppins', sans-serif;
+    --font2: 'Quicksand', sans-serif;
+}
+
+* {
+    font-family: var(--font2);
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body, html {
+    background-color: #6F3282;
+    height: 100vh;
+    width: 100vw;
+}
+
+main {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+}
+
+section#login{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    overflow: hidden;
+
+    background-color: white;
+    width: 250px;
+    height: 520px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px rgba(11, 11, 11, 0.468);
+
+    transition: width 0.5s, height 0.3s;
+    transition-timing-function: ease;
+    transform: translate(-50%, -50%);
+}
+
+section#login > div#image {
+    display: block;
+    background: #6F3282 url(../images/pexels-daniel-watson-1487154.jpg) no-repeat;
+    background-size: cover;
+    background-position: left top;
+    height: 200px;
+}
+
+section#login > div#form {
+    display: block;
+    padding: 10px;
+}
+
+section#login > div#form > h1 {
+    font-family: var(--font1); 
+    text-align: center;
+    margin-bottom: 10px;   
+}
+
+section#login > div#form > p {
+    font-size: 0.8em;
+    text-align: center;
+    margin-bottom: 10px;   
+}
+
+form > div.campo {
+    background-color: #795285;
+    display: block;
+    width: 100%;
+    height: 40px;
+    border: 2px solid #795285;
+    border-radius: 8px;
+    margin: 5px 0px;
+}
+div.campo > label {
+    display: none;
+}
+
+div.campo > span {
+    color: white;
+    font-size: 2em;
+    width: 40px;
+    padding: 5px;
+}
+
+div.campo > input {
+    background-color: #92cabe;
+    font-size: 1em;
+    width: calc(100% - 45px);
+    height: 100%;
+    border: 0px;
+    border-radius: 8px;
+    padding: 4px; 
+
+    transform: translatey(-13px);
+}
+
+div.campo > input:focus-within {
+    background-color: white;
+}
+
+form > input[type=submit] {
+    display: block;
+    font-size: 1em;
+    width: 100%;
+    height: 40px;
+    background-color: #7DABA1;
+    color: white;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form > input[type=submit]:hover {
+    background-color: #51716a;
+}
+
+form > a.button {
+    display: block;
+    font-size: 1em;
+    width: 100%;
+    height: 40px;
+    background-color: rgb(246, 246, 246);
+    color: #51716a;
+    padding-top: 7px;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+form > a.button:hover {
+    background-color: #a7e7cb;
+}
+
+form > a.button > span {
+    font-size: 0.8em;
+}
+
